@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Buggy
+    {
+        public int x, y;
+        public Buggy(int laenge, int breite)
+        {
+            x = laenge - 5;
+            y = breite - 4;
+        }
+        
+    }
+}
