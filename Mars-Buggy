@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace ConsoleApplication1
 {
@@ -9,65 +10,75 @@ namespace ConsoleApplication1
     {
 
 
-        static char[,] Fieldstart(int laenge, int breite, Buggy buggy)
-        {
-            char[,] feld = new char[laenge, breite];
-            for (int y = 0; y < breite; y++)
-            {
-                for (int x = 0; x < laenge; x++)
-                {
-                    feld[x, y] = ' ';
-                    if (y == breite - 2)
-                    {
-                        feld[x, y] = 'T';
-                    }
-                    if (y == breite - 1)
-                    {
-                        feld[x, y] = '|';
-                    }
-                }
-                feld[buggy.x, buggy.y] = '#';
-                
+        
 
 
-            }
-            return feld;
-        }
 
-        static char[,] update(char[,] feld)
+       /* static char[,] update(char[,] feld, int breite, int laenge, Buggy buggy)
         {
             char[,] altesfeld = feld;
-            for (int y = 0; y < feld.Length
-        }
+            for (int y = 0; y < breite; y++)
+            {
+                for (int x = laenge - 2; x >= 0; x--)
+                {
+                    feld[x + 1, y] = altesfeld[x, y];
+                    if (x - 1 < 0 || altesfeld[x, y] == 'H')
+                    {
+                        feld[x + 1, y] = 'H';
+                    }
+                }
+            }
+            //feld[buggy.x, buggy.y] = '#';
+            return feld;
+        }*/
 
 
-        static void draw(char[,] grid, int laenge, int breite)
+
+
+
+        /*static void draw(char[,] grid, int laenge, int breite, Buggy buggy)
         {
             Console.Clear();
             string zeile = "";
             for (int y = 0; y < breite; y++)
             {
-                for (int x = 0; x < laenge; x++)
+                for (int x = 6; x < laenge; x++)
                 {
-                    zeile += grid[x, y];
+                    if (x == buggy.x && y == buggy.y)
+                    {
+                        zeile += '#';
+                    }
+                    else
+                    {
+                        zeile += grid[x, y];
+                    }
                 }
                 Console.WriteLine(zeile);
                 zeile = "";
             }
-        }
+        }*/
 
 
         static void Main(string[] args)
         {
             int laenge = 79, breite = 20;
+            char[,] feld = new char[laenge, breite];
             Buggy buggy = new Buggy(laenge, breite);
-            char[,] feld = Fieldstart(laenge, breite, buggy);
-            draw(feld, laenge, breite);
+            Arbeiter arbeiterObjekt = new Arbeiter(feld, laenge, breite, buggy);
+            feld = arbeiterObjekt.starter(laenge, breite);
+            Thread arbeiterAktualisiert = new Thread(arbeiterObjekt.aktualisieren);
+            Thread arbeiterZeichnet = new Thread(arbeiterObjekt.zeichnen);
+            //draw(feld, laenge, breite, buggy);
+            arbeiterAktualisiert.Start();
+            arbeiterZeichnet.Start();
             Console.ReadKey();
-            while (true)
+            
+            /*while (true)
             {
-
-            }
+                feld = update(feld, breite, laenge, buggy);
+                draw(feld, laenge, breite, buggy);
+                Console.ReadKey();
+            }*/
         }
     }
 }
