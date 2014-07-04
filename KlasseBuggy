@@ -7,11 +7,68 @@ namespace ConsoleApplication1
 {
     class Buggy
     {
-        public int x, y;
-        public Buggy(int laenge, int breite)
+        private int oben, unten, links, rechts, sprung, geschw;
+        
+        public Buggy(int oben, int unten, int links, int rechts, int sprung, int geschw)
         {
-            x = laenge - 5;
-            y = breite - 4;
+            this.oben = oben;
+            this.links = links;
+            this.unten = unten;
+            this.rechts = rechts;
+            this.sprung = sprung;
+            this.geschw = geschw;
+        }
+
+       /* Unvollständiger Konstruktor
+       public Buggy()
+        {
+            oben = ;
+            links = ;
+            unten = ;
+            rechts = ;
+            sprung = ;
+            geschw = ;
+        } */
+
+
+        //Datenkapselung
+
+        public int getOben()
+        {
+            return oben;
+        }
+
+        public int getUnten()
+        {
+            return unten;
+        }
+
+        public int getLinks()
+        {
+            return links;
+        }
+       
+        public int getRechts()
+        {
+            return rechts;
+        }
+
+        public int getSprung()
+        {
+            return sprung;
+        }
+
+        public int getGeschw()
+        {
+            return geschw;
+        }
+
+        //Arrayübergabe, noch nicht vollständig
+        public Char[,] getGraphic()
+        {
+            int a = links+rechts;
+            Char [,] bug = new Char[links+rechts, oben+unten];
+            return bug;
         }
         
     }
