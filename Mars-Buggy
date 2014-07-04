@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+
+
+        static char[,] Fieldstart(int laenge, int breite, Buggy buggy)
+        {
+            char[,] feld = new char[laenge, breite];
+            for (int y = 0; y < breite; y++)
+            {
+                for (int x = 0; x < laenge; x++)
+                {
+                    feld[x, y] = ' ';
+                    if (y == breite - 2)
+                    {
+                        feld[x, y] = 'T';
+                    }
+                    if (y == breite - 1)
+                    {
+                        feld[x, y] = '|';
+                    }
+                }
+                feld[buggy.x, buggy.y] = '#';
+                
+
+
+            }
+            return feld;
+        }
+
+        static char[,] update(char[,] feld)
+        {
+            char[,] altesfeld = feld;
+            for (int y = 0; y < feld.Length
+        }
+
+
+        static void draw(char[,] grid, int laenge, int breite)
+        {
+            Console.Clear();
+            string zeile = "";
+            for (int y = 0; y < breite; y++)
+            {
+                for (int x = 0; x < laenge; x++)
+                {
+                    zeile += grid[x, y];
+                }
+                Console.WriteLine(zeile);
+                zeile = "";
+            }
+        }
+
+
+        static void Main(string[] args)
+        {
+            int laenge = 79, breite = 20;
+            Buggy buggy = new Buggy(laenge, breite);
+            char[,] feld = Fieldstart(laenge, breite, buggy);
+            draw(feld, laenge, breite);
+            Console.ReadKey();
+            while (true)
+            {
+
+            }
+        }
+    }
+}
