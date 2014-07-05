@@ -12,7 +12,10 @@ namespace ConsoleApplication1
         private int breite, laenge;
         private Buggy buggy;
         public bool run;
-
+        
+        
+        
+        //übergibt die benötigten Werte
         public Arbeiter(char[,] gebegrid, int gebelaenge, int gebebreite, Buggy gebebuggy)
         {
             run = true;
@@ -21,10 +24,15 @@ namespace ConsoleApplication1
             laenge = gebelaenge;
             buggy = gebebuggy;
         }
-
+        
+        
+        
+        
+        //verändert das Array nach den Regeln
         public void aktualisieren()
         {
             starter(laenge, breite);
+            //Prozedur pro Bild
             while (run)
             {
                 char[,] altesfeld = feld;
@@ -39,10 +47,13 @@ namespace ConsoleApplication1
                         }
                     }
                 }
-                //feld[buggy.x, buggy.y] = '#';
+                //Eine Aktualisierung pro Sekunde
                 Thread.Sleep(1000);
             }
         }
+        
+        
+        //Schreibt das Array in die Konsole.
         public void zeichnen()
         {
             string zeile = "";
@@ -66,10 +77,14 @@ namespace ConsoleApplication1
                     Console.WriteLine(zeile);
                     zeile = "";
                 }
+                //ein Bild pro Sekunde
                 Thread.Sleep(1000);
             }
         }
-
+        
+        
+        
+        //Erschafft ein Startarray
         public char[,] starter(int laenge, int breite)
         {
             for (int y = 0; y < breite; y++)
@@ -86,9 +101,6 @@ namespace ConsoleApplication1
                         feld[x, y] = '|';
                     }
                 }
-                //feld[buggy.x, buggy.y] = '#';
-                
-
 
             }
             return feld;
