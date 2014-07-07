@@ -7,9 +7,7 @@ namespace ConsoleApplication1
 {
     class Buggy
     {
-        private int oben, unten, links, rechts, sprung, geschw; //wenn du die public machst, brauchst du die ganzen Methoden
-                                                                nicht
-        
+        private int oben, unten, links, rechts, sprung, geschw;
         public Buggy(int oben, int unten, int links, int rechts, int sprung, int geschw)
         {
             this.oben = oben;
