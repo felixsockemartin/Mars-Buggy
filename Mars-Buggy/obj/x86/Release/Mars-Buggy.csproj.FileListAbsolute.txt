@@ -1,0 +1,5 @@
+C:\Users\Felix Martin\Documents\Visual Studio 2010\Projects\Mars-Buggy BETA\Mars-Buggy\bin\Release\Mars-Buggy.exe
+C:\Users\Felix Martin\Documents\Visual Studio 2010\Projects\Mars-Buggy BETA\Mars-Buggy\bin\Release\Mars-Buggy.pdb
+C:\Users\Felix Martin\Documents\Visual Studio 2010\Projects\Mars-Buggy BETA\Mars-Buggy\obj\x86\Release\Mars-Buggy.csprojResolveAssemblyReference.cache
+C:\Users\Felix Martin\Documents\Visual Studio 2010\Projects\Mars-Buggy BETA\Mars-Buggy\obj\x86\Release\Mars-Buggy.exe
+C:\Users\Felix Martin\Documents\Visual Studio 2010\Projects\Mars-Buggy BETA\Mars-Buggy\obj\x86\Release\Mars-Buggy.pdb

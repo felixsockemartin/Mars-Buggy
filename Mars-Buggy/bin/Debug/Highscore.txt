@@ -1,0 +1,10 @@
+Martin;300
+Felix;310
+Felix;360
+Chaos;400
+Felix;500
+Socke;527
+Felix;876
+Alex;1000
+DOS;1000
+Socke;1104
