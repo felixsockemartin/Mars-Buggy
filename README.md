@@ -1,4 +1,4 @@
-Mars-Buggy
+Mars-Buggy 1.00
 ==========
 
 Moon Buggy 2: Jetzt mit Monstern
