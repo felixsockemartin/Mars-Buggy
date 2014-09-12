@@ -19,11 +19,11 @@ Die Datei Level.txt verwaltet die verschiedenen Level mit ihren Schwierigkeitsgr
 
 Default:
 
-50;30;100;0
-100;20;50;0
-200;20;30;1
-500;20;30;2
-0;10;30;2
+50;30;100;0\n
+100;20;50;0\n
+200;20;30;1\n
+500;20;30;2\n
+0;10;30;2\n
 
 Die Anzahl der Level hängt von der Anzahl der Zeilen in der Datei ab. Leerzeilen sind nicht möglich. In jeder Zeile müssen 4 Ganzzahlen stehen die mit ; abgetrennt sind. Die erste Zeile ist das erste Level und so weiter.
 
