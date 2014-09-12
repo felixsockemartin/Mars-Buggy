@@ -199,7 +199,10 @@ namespace MarsBuggy
                     System.Array.Resize<Schuss>(ref schüsse, schüsse.Length + 1);
                     schüsse[schüsse.Length - 1] = new Schuss();
                     if (schüsse.Length > 1) { SchüsseSortieren(); }
-                    Level.score -= 1;
+                    if (Level.score > 0)
+                    {
+                        Level.score -= 1;
+                    }
                     break;
             }
         }
