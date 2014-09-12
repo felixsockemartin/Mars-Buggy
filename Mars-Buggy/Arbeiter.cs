@@ -14,7 +14,7 @@ namespace MarsBuggy
             puffer = 100,
             bildrate = 40,
             breite = 20,
-            länge = 79 + puffer,
+            länge = 100 + puffer,
 
             wiederholung = 1000 / bildrate;
         static public bool run;
@@ -170,6 +170,8 @@ namespace MarsBuggy
             schuss = false;
             Level.gegenwart = 0;
             Level.score = 0;
+            Console.WindowHeight = breite + 2;
+            Console.WindowWidth = länge - puffer + 1;
         }
 
         /// <summary>

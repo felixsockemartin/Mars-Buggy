@@ -31,3 +31,8 @@ F:\Schule\Ritschel\Abgabe\Mars-Buggy Code\Mars-Buggy\obj\x86\Debug\Mars-Buggy.ex
 F:\Schule\Ritschel\Abgabe\Mars-Buggy Code\Mars-Buggy\obj\x86\Debug\Mars-Buggy.pdb
 I:\Schule\Ritschel\Abgabe\Mars-Buggy Code\Mars-Buggy\obj\x86\Debug\Mars-Buggy.exe
 I:\Schule\Ritschel\Abgabe\Mars-Buggy Code\Mars-Buggy\obj\x86\Debug\Mars-Buggy.pdb
+C:\Users\Martin\Documents\GitHub\Mars-Buggy\Mars-Buggy\bin\Debug\Mars-Buggy.exe
+C:\Users\Martin\Documents\GitHub\Mars-Buggy\Mars-Buggy\bin\Debug\Mars-Buggy.pdb
+C:\Users\Martin\Documents\GitHub\Mars-Buggy\Mars-Buggy\obj\x86\Debug\Mars-Buggy.csprojResolveAssemblyReference.cache
+C:\Users\Martin\Documents\GitHub\Mars-Buggy\Mars-Buggy\obj\x86\Debug\Mars-Buggy.exe
+C:\Users\Martin\Documents\GitHub\Mars-Buggy\Mars-Buggy\obj\x86\Debug\Mars-Buggy.pdb

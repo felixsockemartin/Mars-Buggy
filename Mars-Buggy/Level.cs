@@ -121,6 +121,7 @@ namespace MarsBuggy
             }
             Console.WriteLine();
             Console.WriteLine("Ihre Punktzahl: " + score);
+            Console.WriteLine("Beliebige Taste zum fortfahren drücken");
             Console.ReadKey(true);
             Console.WriteLine();
             if (liste.Any(f => f.score < Level.score))
@@ -130,7 +131,8 @@ namespace MarsBuggy
                 {
                     Console.WriteLine("Geben Sie bitte ihren Namen ein.");
                     Console.WriteLine("; ist nicht erlaubt. Die Person die es doch tut,");
-                    Console.WriteLine("wird beim nächsten Aufruf der Liste rausgekickt:");
+                    Console.WriteLine("wird beim nächsten Aufruf der Liste rausgekickt!");
+                    Console.WriteLine("Bitte Namen eingeben:");
                     name = Console.ReadLine();
                 } while (name == "");
                 liste[0].name = name;
